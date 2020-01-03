@@ -12,13 +12,12 @@ trait HasCustomProperties
         $this->casts = ['custom_properties' => 'array']; // TODO cuidado que no machaque lo que lleve el modelo
     }
 
-
     public function forgetCustomProperty(string $name): self
     {
-
         $customProperties = $this->custom_properties;
         Arr::forget($customProperties, $name);
         $this->custom_properties = $customProperties;
+
         return $this;
     }
 
@@ -54,6 +53,7 @@ trait HasCustomProperties
         $customProperties = $this->custom_properties;
         Arr::set($customProperties, $name, $value);
         $this->custom_properties = $customProperties;
+
         return $this;
     }
 }

@@ -25,7 +25,7 @@ class CustomPropertiesTest extends TestCase
 
         $this->assertDatabaseHas('fakes', [
             'id' => 1,
-            'custom_properties' => json_encode([ 'foo' => 'bar' ]),
+            'custom_properties' => json_encode(['foo' => 'bar']),
         ]);
     }
 
@@ -58,7 +58,7 @@ class CustomPropertiesTest extends TestCase
 
         $this->assertDatabaseMissing('fakes', [
             'id' => 1,
-            'custom_properties' => json_encode([ 'foo' => 'bar' ]),
+            'custom_properties' => json_encode(['foo' => 'bar']),
         ]);
     }
 }
