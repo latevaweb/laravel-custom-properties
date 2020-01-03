@@ -9,7 +9,7 @@ trait HasCustomProperties
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->casts = ['custom_properties' => 'array']; // TODO cuidado que no machaque lo que lleve el modelo
+        $this->casts['custom_properties'] = 'array';
     }
 
     public function forgetCustomProperty(string $name): self
