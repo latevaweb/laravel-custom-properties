@@ -2,6 +2,13 @@
 
 Trait to add dynamic custom properties to Eloquent models
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/latevaweb/laravel-custom-properties/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/latevaweb/laravel-custom-properties/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/latevaweb/laravel-custom-properties/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/latevaweb/laravel-custom-properties/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/latevaweb/laravel-custom-properties/badges/build.png?b=master)](https://scrutinizer-ci.com/g/latevaweb/laravel-custom-properties/build-status/master)
+[![StyleCI](https://github.styleci.io/repos/231571767/shield?branch=master)](https://github.styleci.io/repos/231571767)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Laravel 6.x](https://img.shields.io/badge/Laravel-6.x-orange.svg)](http://laravel.com)
+
 Once the trait is installed on the model and migration field is added you can do these things:
 
 ```php
