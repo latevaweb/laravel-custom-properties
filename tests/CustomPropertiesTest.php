@@ -61,4 +61,14 @@ class CustomPropertiesTest extends TestCase
             'custom_properties' => json_encode(['foo' => 'bar']),
         ]);
     }
+
+    /** a model without custom properties (NULL column) can forget one: nothing to remove, it stays NULL */
+    public function testForgetCustomPropertyWhenThereAreNone()
+    {
+        $this->assertNull($this->fake->custom_properties);
+
+        $this->fake->forgetCustomProperty('foo')->save();
+
+        $this->assertNull($this->fake->fresh()->custom_properties);
+    }
 }
