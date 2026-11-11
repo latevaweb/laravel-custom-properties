@@ -15,6 +15,12 @@ trait HasCustomProperties
     public function forgetCustomProperty(string $name): self
     {
         $customProperties = $this->custom_properties;
+
+        // Without custom properties (NULL column) there is nothing to forget, and Arr::forget() does not accept null
+        if (!is_array($customProperties)) {
+            return $this;
+        }
+
         Arr::forget($customProperties, $name);
         $this->custom_properties = $customProperties;
 
