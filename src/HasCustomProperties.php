@@ -17,7 +17,7 @@ trait HasCustomProperties
         $customProperties = $this->custom_properties;
 
         // Without custom properties (NULL column) there is nothing to forget, and Arr::forget() does not accept null
-        if (!is_array($customProperties)) {
+        if (! is_array($customProperties)) {
             return $this;
         }
 
@@ -30,9 +30,8 @@ trait HasCustomProperties
     /**
      * Get the value of custom property with the given name.
      *
-     * @param string $propertyName
-     * @param mixed $default
-     *
+     * @param  string  $propertyName
+     * @param  mixed  $default
      * @return mixed
      */
     public function getCustomProperty(string $propertyName, $default = null)
@@ -49,9 +48,8 @@ trait HasCustomProperties
     }
 
     /**
-     * @param string $name
-     * @param mixed $value
-     *
+     * @param  string  $name
+     * @param  mixed  $value
      * @return $this
      */
     public function setCustomProperty(string $name, $value): self
